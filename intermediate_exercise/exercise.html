@@ -28,7 +28,9 @@
 
 	<script>
 		$(document).ready(function(){
-			$("form").removeAttr("style"); //do not know
+			var cnt = $("form").contents();
+			$("form").replaceWith(cnt);
+
 			$("article").append("<div> </div>").append("<div> </div>").append("<div> </div>").append("<div> </div>").append("<div> </div>");
 			$("input").val("Whats up"); // changing the value of the input field
 			$("div").addClass("box"); //adding class name to each new DIV

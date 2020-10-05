@@ -4,7 +4,10 @@
 <title>SimpleBlog</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="images/SimpleBlog.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+
+
 <body>
 <div id="wrap">
   <div id="header">
@@ -29,6 +32,7 @@
       <li><a href="http://all-free-download.com/free-website-templates/"><span>About</span></a></li>
     </ul>
   </div>
+
   <div id="content-wrap">
     <div id="sidebar">
       <h1>Sidebar Menu</h1>
@@ -39,6 +43,7 @@
         <li><a href="http://all-free-download.com/free-website-templates/">More Free Templates</a></li>
         <li><a href="http://all-free-download.com/free-website-templates/">Premium Templates</a></li>
       </ul>
+
       <h1>Site Partners</h1>
       <ul class="sidemenu">
         <li><a href="http://all-free-download.com/free-website-templates/">Dreamhost</a></li>
@@ -47,12 +52,14 @@
         <li><a href="http://all-free-download.com/free-website-templates/">Fotolia.com</a></li>
         <li><a href="http://all-free-download.com/free-website-templates/">Text Link Ads</a></li>
       </ul>
+
       <h1>Wise Words</h1>
-      <p>&quot;Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.&quot; </p>
+      <p class="text1">&quot;Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.&quot; </p>
       <p class="align-right">- William James</p>
       <h1>Support Styleshout</h1>
       <p>If you are interested in supporting my work and would like to contribute, you are welcome to make a small donation through the donate link on my website - it will be a great help and will surely be appreciated.</p>
     </div>
+
     <div id="main"> <a name="TemplateInfo"></a>
       <h1>Template Info</h1>
       <p><strong>SimpleBlog 1.0</strong> is a free, W3C-compliant, CSS-based website template by <strong>styleshout.com</strong>. This work is distributed under the <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/2.5/"> Creative Commons Attribution 2.5 License</a>, which means that you are free to use and modify it for any purpose. All I ask is that you include a link back to my website in your credits.</p>
@@ -87,8 +94,8 @@
           <label>Name</label>
           <input name="dname" value="Your Name" type="text" size="30" />
           <label>Email</label>
-          <input name="demail" value="Your Email" type="text" size="30" />
-          <label>Your Comments</label>
+          <input name="demail" value="Your Email" type="text" size="30" /><br><br>
+          <label class="label--opinion">Your Comments</label>
           <textarea rows="5" cols="5"></textarea>
           <br />
           <input class="button" type="submit" />
@@ -97,6 +104,62 @@
       <br />
     </div>
   </div>
+
+	<script>
+		$(document).ready(function(){
+			/*var cnt = $("form").contents();
+			$("form").replaceWith(cnt);
+      $("article").append("<div> </div>").append("<div> </div>").append("<div> </div>").append("<div> </div>").append("<div> </div>");
+			$("input").val("Whats up"); // changing the value of the input field
+			$("div").addClass("box"); //adding class name to each new DIV
+			$("a").attr("href", "www.codefactory.wien");*/
+
+      //advanced
+      //1. Change the href attribute to "www.codefactory.wien" for all links
+      $("a").attr("href", "https://.codefactory.wien"); 
+
+      //2
+      $("a").replaceAll("href", "www.codefactory.wien");
+      
+      //3
+      $("code").css("color", "red");
+      
+      //4.
+      $("ol>li").css("background-color", "#2a7b90");
+
+      //4. Within the form, change the placeholder text to "Express your opinion"
+      $(".label--opinion").replaceWith("Express your opinion") //ok
+
+      //5. Replace all images on the page with this one "https://codefactory.wien/wp-content/themes/hestia/cf-images/big-jpg/1-frontend.jpg"
+      $("img").attr("src", "https://codefactory.wien/wp-content/themes/hestia/cf-images/big-jpg/1-frontend.jpg");
+      
+      //6.
+      $("blockquote").css({"background-color": "orange", "font-style": "italic"});
+      
+      //7. At the top of the page, change the logo color "Simple" to black and "Blog" to white
+
+      $(":contains('Simple')").css("color", "black");
+      $(".gray").css("color", "white");
+    
+      $("title").css("color", "black");
+
+      //8.
+      $(".date").remove();
+
+      //9.
+      $('.sidemenu').append($sidebarElement5,$sidebarElement6,$sidebarElement7);
+
+
+      // $(".sidemenu").append("<li><a href=''>New Template</a></li>").append("<li><a href=''>Order Template</a></li>").append("<li><a href=''>Contact us</a></li>");
+      
+      //10.
+      $(".text1").replaceWith("When someone says: 'I want a programming language in which I need only to say what I wish, and done', give him a lollipop.");
+      
+
+      
+		});
+	</script>
+
   <div id="footer">
     <p> &copy; 2006 <strong>Your Company</strong> &nbsp;&nbsp; Design by: <a href="http://www.styleshout.com/">styleshout</a> | Valid: <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://all-free-download.com/free-website-templates/">Home</a>&nbsp;|&nbsp; <a href="http://all-free-download.com/free-website-templates/">Sitemap</a>&nbsp;|&nbsp; <a href="http://all-free-download.com/free-website-templates/">Home</a> </p>
   </div>
